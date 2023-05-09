@@ -39,7 +39,12 @@ class ParkingController extends Controller
 
     public function index()
     {
-        return ParkingResource::collection(Parking::all());
+        return ParkingResource::collection(Parking::active()->get());
+    }
+
+    public function history()
+    {
+        return ParkingResource::collection(Parking::stopped()->get());
     }
 
     public function show(Parking $parking)
