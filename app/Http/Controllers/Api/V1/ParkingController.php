@@ -37,6 +37,11 @@ class ParkingController extends Controller
         return ParkingResource::make($parking);
     }
 
+    public function index()
+    {
+        return ParkingResource::collection(Parking::all());
+    }
+
     public function show(Parking $parking)
     {
         return ParkingResource::make($parking);
