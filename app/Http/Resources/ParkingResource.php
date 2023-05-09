@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Services\ParkingPriceService;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ParkingResource extends JsonResource
